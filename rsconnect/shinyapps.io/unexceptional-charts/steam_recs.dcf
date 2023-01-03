@@ -1,0 +1,14 @@
+name: steam_recs
+title: steam_recs
+username:
+account: unexceptional-charts
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7970958
+bundleId: 6694578
+url: https://unexceptional-charts.shinyapps.io/steam_recs/
+when: 1672781531.48954
+lastSyncTime: 1672781531.48954
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: steamy_app_workspace.RData|module08-cr-saheedb|module09-cr-saheedb

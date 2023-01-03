@@ -1,0 +1,13 @@
+name: steamrecs
+title: steamrecs
+username:
+account: unexceptional-charts
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3165089
+bundleId: 3836037
+url: https://unexceptional-charts.shinyapps.io/steamrecs/
+when: 1604895764.41125
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: steamy_app_workspace.RData|steamrecs
