@@ -3,23 +3,28 @@ library(shinydashboard)
 library(shinyWidgets)
 library(tidyverse)
 library(mongolite)
-library(shinyjs)
 library(shiny)
 library(DT)
 
+## sandbox db url
 mongo_url <- "mongodb+srv://bs:bs@cluster0.cgwmf.mongodb.net/steam_db?retryWrites=true&w=majority"
-# games_col <- mongo(collection = "steam_games", db = "steam_db", url = mongo_url)
-# tags_col  <- mongo(collection = "steam_tags", db = "steam_db", url = mongo_url)
+games_col <- mongo(collection = "steam_games", db = "steam_db", url = mongo_url)
+tags_col  <- mongo(collection = "steam_tags", db = "steam_db", url = mongo_url)
 
-ui <- dashboardPage(
+ui <- 
+dashboardPage(
+  skin = "red",
   dashboardHeader(
     title = "steamRecs"
   ),
-  dashboardSidebar(),
+  dashboardSidebar(collapsed = TRUE),
   dashboardBody(
-    useShinyjs(),
+    setBackgroundImage(
+      src = "bg.jpg", shinydashboard = TRUE),
+    tags$script(src = "enter_button.js"),
     fluidRow(
       box(
+        solidHeader = TRUE,
         width = 3,
         fluidRow(
           column(width = 12,
@@ -47,6 +52,7 @@ ui <- dashboardPage(
                                width = "100%")))
       ),
       box(
+        solidHeader = TRUE,
         width = 3,
         fluidRow(
           column(width = 12,
@@ -55,6 +61,7 @@ ui <- dashboardPage(
         )
       ),
       box(
+        solidHeader = TRUE,
         width = 3,
         fluidRow(
           column(
